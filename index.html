@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Rankings</title>
+    <title>Floor 12 On Top</title>
     <style>
         body {
             background-color: #121212;
@@ -94,16 +94,20 @@
 
     <script>
         const rankedMovies = [
-            { title: "Twilight", img: "https://image.tmdb.org/t/p/original/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg", rating: 7.2 },
-            { title: "Creep", img: "https://image.tmdb.org/t/p/original/qn53D574tT0YRyLgirEFHQwGUXw.jpg", rating: 8.5 },
-            { title: "Creep 2", img: "https://image.tmdb.org/t/p/original/a0m7WciFnBqpcyH1Yi8i4tdvk0k.jpg", rating: 8.1 },
-            { title: "SuperBad", img: "https://image.tmdb.org/t/p/original/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg", rating: 9.0 },
-            { title: "Heretic", img: "https://image.tmdb.org/t/p/original/fr96XzlzsONrQrGfdLMiwtQjott.jpg", rating: 6.8 },
-            { title: "Twilight: New Moon", img: "https://image.tmdb.org/t/p/original/j5jM5pq78ObAXX1WhTsb115EkLl.jpg", rating: 7.0 },
-            { title: "American Psycho", img: "https://image.tmdb.org/t/p/original/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg", rating: 9.2 },
-            { title: "The Substance", img: "https://image.tmdb.org/t/p/original/o7GFN0c1YvbnB0JmAb9aSoDDvdn.jpg", rating: 8.3 },
-            { title: "Ferris Bueller's Day Off", img: "https://image.tmdb.org/t/p/original/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg", rating: 8.7 },
-            { title: "Bodies Bodies Bodies", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 7.5 }
+            { title: "The Room", img: "https://image.tmdb.org/t/p/original/oGI3QSsY4XsmUzuNYUQBQDdjuaP.jpg", rating: 10 },
+            { title: "Companion", img: "https://image.tmdb.org/t/p/original/yBJAA1oAF7RB7qLycJtYo9FPsQ0.jpg", rating: 0.0 },
+            { title: "Twilight", img: "https://image.tmdb.org/t/p/original/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg", rating: 0.0 },
+            { title: "Creep", img: "https://image.tmdb.org/t/p/original/qn53D574tT0YRyLgirEFHQwGUXw.jpg", rating: 0.0 },
+            { title: "Creep 2", img: "https://image.tmdb.org/t/p/original/a0m7WciFnBqpcyH1Yi8i4tdvk0k.jpg", rating: 0.0 },
+            { title: "SuperBad", img: "https://image.tmdb.org/t/p/original/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg", rating: 0.0 },
+            { title: "The Girl Next Door", img: "https://image.tmdb.org/t/p/original/eOdZYDROf7GSOAHwgF3thu99ObH.jpg", rating: 0.0 },
+            { title: "Heretic", img: "https://image.tmdb.org/t/p/original/fr96XzlzsONrQrGfdLMiwtQjott.jpg", rating: 0.0 },
+            { title: "Twilight: New Moon", img: "https://image.tmdb.org/t/p/original/j5jM5pq78ObAXX1WhTsb115EkLl.jpg", rating: 0.0 },
+            { title: "American Psycho", img: "https://image.tmdb.org/t/p/original/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg", rating: 0.0 },
+            { title: "The Substance", img: "https://image.tmdb.org/t/p/original/o7GFN0c1YvbnB0JmAb9aSoDDvdn.jpg", rating: 0.0 },
+            { title: "Ferris Bueller's Day Off", img: "https://image.tmdb.org/t/p/original/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg", rating: 0.0 },
+            { title: "Cocaine Bear", img: "https://image.tmdb.org/t/p/original/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg", rating: 0.0 },
+            { title: "Bodies Bodies Bodies", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 0.0 }
         ];
 
         // Sort movies by rating (highest to lowest)
@@ -145,7 +149,7 @@
             { title: "Saltburn", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", category: "Thriller" },
             { title: "The Lighthouse", img: "https://image.tmdb.org/t/p/w500/3nk9UoepYmv1G9oP18q6JJCeYwN.jpg", category: "Horror" },
             { title: "The Killing of a Sacred Deer", img: "https://image.tmdb.org/t/p/original/AqMJ2bu2A4kZYpuCxvwADLpp45D.jpg", category: "Horror" },
-            { title: "Pontypool", img: "https://image.tmdb.org/t/p/original/gpldyCjpfRAC9Z8u2gnLMrVNiNW.jpg", category: "Horror" },
+            { title: "Pontypool", img: "https://image.tmdb.org/t/p/original/eGCvmv0Dmaqo9O8qckMDSIHSSZ7.jpg", category: "Horror" },
 
         //Non-Horror Movies
             { title: "Paddington Bear", img: "https://image.tmdb.org/t/p/w500/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg", category: "Family" },
