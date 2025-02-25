@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floor 12 On Top</title>
     <style>
-        
-        body {
+         body {
             background-color: #121212;
             color: white;
             font-family: Arial, sans-serif;
@@ -14,26 +13,21 @@
             padding: 0;
             text-align: center;
         }
-        
+
         .rankedMovies {
             display: flex;
             justify-content: center;
             overflow-x: auto;
-            padding: 10px 10px 10px 30px; /* Add left padding */
+            padding: 10px;
             gap: 10px;
             scrollbar-width: none;
             -ms-overflow-style: none;
             max-width: 100%;
             white-space: nowrap;
-            position: relative;
         }
-        
+
         .rankedMovies::-webkit-scrollbar {
             display: none;
-        }
-        
-        .movie:first-child {
-            margin-left: -20px; /* Moves the first movie to the left */
         }
 
         .movie {
@@ -83,11 +77,11 @@
             width: 100%;
             border-radius: 5px;
         }
-        
+
         .upNextMovie:hover {
             transform: scale(1.1);
+        }       
 
-        }
     </style>
 </head>
 <body>
