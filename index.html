@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floor 12 On Top</title>
     <style>
+        
         body {
             background-color: #121212;
             color: white;
@@ -12,32 +13,22 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scroll on body */
-        }
-
-        h1 {
-            margin: 20px 0; /* Add margin to the heading */
         }
 
         .rankedMovies {
             display: flex;
             justify-content: center;
             overflow-x: auto;
-            padding: 10px 0; /* Add vertical padding */
+            padding: 10px;
             gap: 10px;
-            scrollbar-width: none; /* Hide scrollbar */
-            -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
             max-width: 100%;
             white-space: nowrap;
-            scroll-behavior: smooth; /* Smooth scroll behavior */
-            border-top: 3px solid #fff; /* Top border for a wave effect */
-            border-bottom: 3px solid #fff; /* Bottom border for a wave effect */
-            position: relative;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
         }
 
         .rankedMovies::-webkit-scrollbar {
-            display: none; /* Hide scrollbar for WebKit browsers */
+            display: none;
         }
 
         .movie {
@@ -48,7 +39,6 @@
             text-align: center;
             padding: 5px;
             transition: transform 0.2s ease-in-out;
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
         }
 
         .movie img {
@@ -57,11 +47,6 @@
         }
 
         .movie:hover {
-            transform: scale(1.2);
-            z-index: 1; /* Bring hovered movie to the front */
-        }
-
-        .movie:active {
             transform: scale(1.1);
         }
 
@@ -93,9 +78,10 @@
             width: 100%;
             border-radius: 5px;
         }
-
+        
         .upNextMovie:hover {
             transform: scale(1.1);
+
         }
     </style>
 </head>
