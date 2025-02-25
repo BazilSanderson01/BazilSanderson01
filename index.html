@@ -15,21 +15,29 @@
             overflow-x: hidden; /* Prevent horizontal scroll on body */
         }
 
+        h1 {
+            margin: 20px 0; /* Add margin to the heading */
+        }
+
         .rankedMovies {
             display: flex;
             justify-content: center;
             overflow-x: auto;
-            padding: 10px;
+            padding: 10px 0; /* Add vertical padding */
             gap: 10px;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            scrollbar-width: none; /* Hide scrollbar */
+            -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
             max-width: 100%;
             white-space: nowrap;
             scroll-behavior: smooth; /* Smooth scroll behavior */
+            border-top: 3px solid #fff; /* Top border for a wave effect */
+            border-bottom: 3px solid #fff; /* Bottom border for a wave effect */
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
         }
 
         .rankedMovies::-webkit-scrollbar {
-            display: none;
+            display: none; /* Hide scrollbar for WebKit browsers */
         }
 
         .movie {
@@ -40,6 +48,7 @@
             text-align: center;
             padding: 5px;
             transition: transform 0.2s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
         }
 
         .movie img {
@@ -115,7 +124,7 @@
             { title: "Ferris Bueller's Day Off", img: "https://image.tmdb.org/t/p/original/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg", rating: 0.0 },
             { title: "Cocaine Bear", img: "https://image.tmdb.org/t/p/original/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg", rating: 0.0 },
             { title: "Hereditary", img: "https://image.tmdb.org/t/p/w500/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg", rating: 0.0 },
-            { title: "Bodies Bodies Bodies", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 0.0 }
+            { title: "Bodies Bodies Bodies", img: "https://image.tmdb.org/t/p/w500/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 0.0 }
         ];
 
         // Sort movies by rating (highest to lowest)
@@ -153,24 +162,8 @@
             { title: "A Quiet Place", img: "https://image.tmdb.org/t/p/w500/nAU74GmpUk7t5iklEp3bufwDq4n.jpg", category: "Horror" },
             { title: "Talk to Me", img: "https://image.tmdb.org/t/p/w500/1G5mt3uGUW5OWUcxcBUtHm5Zdd9.jpg", category: "Horror" },
             { title: "Split", img: "https://image.tmdb.org/t/p/w500/bqb9WsmZmDIKxqYmBJ9lj7J6hzn.jpg", category: "Horror" },
-            { title: "Saltburn", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", category: "Thriller" },
-            { title: "The Lighthouse", img: "https://image.tmdb.org/t/p/w500/3nk9UoepYmv1G9oP18q6JJCeYwN.jpg", category: "Horror" },
-            { title: "The Killing of a Sacred Deer", img: "https://image.tmdb.org/t/p/original/AqMJ2bu2A4kZYpuCxvwADLpp45D.jpg", category: "Horror" },
-            { title: "Pontypool", img: "https://image.tmdb.org/t/p/original/eGCvmv0Dmaqo9O8qckMDSIHSSZ7.jpg", category: "Horror" },
-            // Non-Horror Movies
-            { title: "Paddington Bear", img: "https://image.tmdb.org/t/p/w500/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg", category: "Family" },
-            { title: "Jackass", img: "https://image.tmdb.org/t/p/original/lMN2OiHFBUFnuW4wPi6TEocR8nq.jpg", category: "Comedy" },
-            { title: "Now You See Me", img: "https://image.tmdb.org/t/p/original/h4LgHQtpm9si92edda5JN6g0tX4.jpg", category: "Thriller" },
-            { title: "Fight Club", img: "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg", category: "Drama" },
-            { title: "Step Brothers", img: "https://image.tmdb.org/t/p/original/jV0eDViuTRf9cmj4H0JNvbvaNbR.jpg", category: "Comedy" },
-            { title: "Inglourious Basterds", img: "https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg", category: "War" },
-            { title: "The Godfather", img: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg", category: "Crime" },
-            { title: "Pulp Fiction", img: "https://image.tmdb.org/t/p/w500/6N4DNsbmYm9Kfj8WnHdyK9uYzM6.jpg", category: "Crime" },
-            { title: "Deadpool", img: "https://image.tmdb.org/t/p/original/jpZ5QKLSV6PHUz5MRS1WcN9sn9R.jpg", category: "Action" },
-            { title: "The Dark Knight", img: "https://image.tmdb.org/t/p/original/uAhG5sZaxh6cdMtdXoCG6T0A76H.jpg", category: "Action" },
-            { title: "The Pursuit of Happyness", img: "https://image.tmdb.org/t/p/original/hcWqYH2VQpYXmdwTjQJuVxAER6o.jpg", category: "Drama" },
-            { title: "Forrest Gump", img: "https://image.tmdb.org/t/p/original/rfTIXkQkWuIZv3C1j8f4iCzEtxN.jpg", category: "Drama" },
-            { title: "The Shawshank Redemption", img: "https://image.tmdb.org/t/p/original/8G2Oe1hll0EoPBtS9LFid3zT8kV.jpg", category: "Drama" },
+            { title: "Saltburn", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", category: "Drama" },
+            { title: "Scream", img: "https://image.tmdb.org/t/p/w500/u1Z41VGUVAt1NUCzZwcaWS3FJpY.jpg", category: "Horror" },
         ];
 
         const upNextMoviesContainer = document.getElementById('upNextMovies');
