@@ -13,12 +13,12 @@
             padding: 0;
             text-align: center;
         }
-
+        
         .rankedMovies {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Ensure movies align to the start */
             overflow-x: auto;
-            padding: 10px;
+            padding: 10px; /* Keep normal padding */
             gap: 10px;
             scrollbar-width: none;
             -ms-overflow-style: none;
@@ -28,6 +28,10 @@
 
         .rankedMovies::-webkit-scrollbar {
             display: none;
+        }
+
+        .movie:first-child {
+            margin-left: 10px; /* Ensures the first movie is fully visible */
         }
 
         .movie {
@@ -95,8 +99,8 @@
 
     <script>
         const rankedMovies = [
-            { title: "The Room", img: "https://image.tmdb.org/t/p/original/oGI3QSsY4XsmUzuNYUQBQDdjuaP.jpg", rating: 10 },
-            { title: "Companion", img: "https://image.tmdb.org/t/p/original/yBJAA1oAF7RB7qLycJtYo9FPsQ0.jpg", rating: 0.0 },
+            { title: "The Room", img: "https://image.tmdb.org/t/p/original/oGI3QSsY4XsmUzuNYUQBQDdjuaP.jpg", rating: 9.2 },
+            { title: "Companion", img: "https://image.tmdb.org/t/p/original/yBJAA1oAF7RB7qLycJtYo9FPsQ0.jpg", rating: 7.6 },
             { title: "Twilight", img: "https://image.tmdb.org/t/p/original/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg", rating: 0.0 },
             { title: "Creep", img: "https://image.tmdb.org/t/p/original/qn53D574tT0YRyLgirEFHQwGUXw.jpg", rating: 0.0 },
             { title: "Creep 2", img: "https://image.tmdb.org/t/p/original/a0m7WciFnBqpcyH1Yi8i4tdvk0k.jpg", rating: 0.0 },
@@ -110,6 +114,9 @@
             { title: "Cocaine Bear", img: "https://image.tmdb.org/t/p/original/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg", rating: 0.0 },
             { title: "Hereditary", img: "https://image.tmdb.org/t/p/w500/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg", rating: 0.0 },
             { title: "Bodies Bodies Bodies", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 0.0 }
+            { title: "Saltburn", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", rating: 0.0 },
+            { title: "Companion", img: "https://image.tmdb.org/t/p/original/yBJAA1oAF7RB7qLycJtYo9FPsQ0.jpg", rating: 0.0 },
+            
         ];
 
         // Sort movies by rating (highest to lowest)
@@ -160,11 +167,6 @@
             { title: "Inglourious Basterds", img: "https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg", category: "War" },
             { title: "The Godfather", img: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg", category: "Crime" },
             { title: "Pulp Fiction", img: "https://image.tmdb.org/t/p/w500/6N4DNsbmYm9Kfj8WnHdyK9uYzM6.jpg", category: "Crime" },
-            { title: "Deadpool", img: "https://image.tmdb.org/t/p/original/jpZ5QKLSV6PHUz5MRS1WcN9sn9R.jpg", category: "Action" },
-            { title: "The Dark Knight", img: "https://image.tmdb.org/t/p/original/uAhG5sZaxh6cdMtdXoCG6T0A76H.jpg", category: "Action" },
-            { title: "The Pursuit of Happyness", img: "https://image.tmdb.org/t/p/original/hcWqYH2VQpYXmdwTjQJuVxAER6o.jpg", category: "Drama" },
-            { title: "Forrest Gump", img: "https://image.tmdb.org/t/p/original/rfTIXkQkWuIZv3C1j8f4iCzEtxN.jpg", category: "Drama" },
-            { title: "The Shawshank Redemption", img: "https://image.tmdb.org/t/p/original/8G2Oe1hll0EoPBtS9LFid3zT8kV.jpg", category: "Drama" },
         ];
 
         const upNextMoviesContainer = document.getElementById('upNextMovies');
