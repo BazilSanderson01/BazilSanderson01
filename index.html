@@ -17,39 +17,38 @@
 
         .rankedMovies {
             display: flex;
-            justify-content: flex-start; /* Align items to the start */
+            justify-content: flex-start;
+            align-items: center; /* Keep movies vertically aligned */
             overflow-x: auto;
             padding: 10px;
             gap: 10px;
-            scrollbar-width: none; /* Hide scrollbar for Firefox */
-            -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer */
-            max-width: 100%; /* Full width */
-            white-space: nowrap; /* Prevent wrapping */
-            scroll-behavior: smooth; /* Smooth scroll behavior */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            max-width: 100%;
+            white-space: nowrap;
+            scroll-behavior: smooth;
         }
-        
         .rankedMovies::-webkit-scrollbar {
             display: none; /* Hide scrollbar for WebKit browsers */
         }
         
         .movie {
-            flex: 0 0 120px; /* Set fixed width for each movie */
-            max-width: 120px; /* Ensure maximum width */
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            padding: 5px;
-            transition: transform 0.2s ease-in-out;
+            height: 180px; /* Adjust as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
         }
 
         .movie img {
             width: 100%;
             border-radius: 5px;
         }
-
+        
         .movie:hover {
             transform: scale(1.2);
-            z-index: 1; /* Bring hovered movie to the front */
+            transform-origin: center bottom;
+            z-index: 1;
         }
 
         .movie:active {
