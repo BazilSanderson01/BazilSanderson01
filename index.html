@@ -17,24 +17,24 @@
 
         .rankedMovies {
             display: flex;
-            justify-content: flex-start; /* Changed to flex-start for better alignment */
+            justify-content: flex-start; /* Align items to the start */
             overflow-x: auto;
             padding: 10px;
             gap: 10px;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            max-width: 100%;
-            white-space: nowrap;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer */
+            max-width: 100%; /* Full width */
+            white-space: nowrap; /* Prevent wrapping */
             scroll-behavior: smooth; /* Smooth scroll behavior */
-            min-width: 100%; /* Ens
-
-        .rankedMovies::-webkit-scrollbar {
-            display: none;
         }
-
+        
+        .rankedMovies::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for WebKit browsers */
+        }
+        
         .movie {
-            flex: 0 0 100px;
-            max-width: 100px;
+            flex: 0 0 120px; /* Set fixed width for each movie */
+            max-width: 120px; /* Ensure maximum width */
             border-radius: 10px;
             overflow: hidden;
             text-align: center;
