@@ -98,26 +98,45 @@
     </div>
 
     <script>
-        const rankedMovies = [
-            { title: "The Room", img: "https://image.tmdb.org/t/p/original/oGI3QSsY4XsmUzuNYUQBQDdjuaP.jpg", rating: 9.2 },
-            { title: "Companion", img: "https://image.tmdb.org/t/p/original/yBJAA1oAF7RB7qLycJtYo9FPsQ0.jpg", rating: 7.2 },
-            { title: "Twilight", img: "https://image.tmdb.org/t/p/original/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg", rating: 7.8 },
-            { title: "Creep", img: "https://image.tmdb.org/t/p/original/qn53D574tT0YRyLgirEFHQwGUXw.jpg", rating: 8.8 },
-            { title: "Creep 2", img: "https://image.tmdb.org/t/p/original/a0m7WciFnBqpcyH1Yi8i4tdvk0k.jpg", rating: 6.9 },
-            { title: "SuperBad", img: "https://image.tmdb.org/t/p/original/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg", rating: 7.1 },
-            { title: "The Girl Next Door", img: "https://image.tmdb.org/t/p/original/eOdZYDROf7GSOAHwgF3thu99ObH.jpg", rating: 7.6 },
-            { title: "Heretic", img: "https://image.tmdb.org/t/p/original/fr96XzlzsONrQrGfdLMiwtQjott.jpg", rating: 8.2 },
-            { title: "Twilight: New Moon", img: "https://image.tmdb.org/t/p/original/j5jM5pq78ObAXX1WhTsb115EkLl.jpg", rating: 6.4 },
-            { title: "American Psycho", img: "https://image.tmdb.org/t/p/original/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg", rating: 6.6 },
-            { title: "The Substance", img: "https://image.tmdb.org/t/p/original/o7GFN0c1YvbnB0JmAb9aSoDDvdn.jpg", rating: 5.4 },
-            { title: "Ferris Bueller's Day Off", img: "https://image.tmdb.org/t/p/original/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg", rating: 6.6 },
-            { title: "Cocaine Bear", img: "https://image.tmdb.org/t/p/original/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg", rating: 4.0 },
-            { title: "Hereditary", img: "https://image.tmdb.org/t/p/w500/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg", rating: 6.5 },
-            { title: "Saltburn", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", rating: 7.1 },
-            { title: "Bodies Bodies Bodies", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 0.0 },
-            { title: "My Little Pony: Equestria Girls", img: "https://image.tmdb.org/t/p/original/egAZsrGuv6XeyMAmSJfjcKRCIWB.jpg", rating: 0.0 },
+const rankedMovies = [
+
+            { title: "Borat", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", rating: 10.0 },
+            { title: "The Room", img: "https://image.tmdb.org/t/p/original/oGI3QSsY4XsmUzuNYUQBQDdjuaP.jpg", rating: 0.0 },
+            { title: "SuperBad", img: "https://image.tmdb.org/t/p/original/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg", rating: 9.0 },
+            { title: "Ferris Bueller's Day Off", img: "https://image.tmdb.org/t/p/original/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg", rating: 8.7 },
+            { title: "Borat 2", img: "https://image.tmdb.org/t/p/original/kwh9dYvZLn7yJ9nfU5sPj2h9O7l.jpg", rating: 0.0 },
+            { title: "Creep", img: "https://image.tmdb.org/t/p/original/qn53D574tT0YRyLgirEFHQwGUXw.jpg", rating: 8.5 },
+            { title: "Heretic", img: "https://image.tmdb.org/t/p/original/fr96XzlzsONrQrGfdLMiwtQjott.jpg", rating: 8.4 },
+            { title: "Parasite", img: "https://image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg", rating 0.0 },
+            { title: "Mickey 17", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 8.3 },
+            { title: "Creep 2", img: "https://image.tmdb.org/t/p/original/a0m7WciFnBqpcyH1Yi8i4tdvk0k.jpg", rating: 8.1 },
+            { title: "Saltburn", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", rating: 7.5 },
+            { title: "The Shining", img: "https://image.tmdb.org/t/p/original/fFYAlrOudDJRYs8tvuHbUk0OGdL.jpg", rating: 8.5 },
+            { title: "Scream", img: "https://image.tmdb.org/t/p/original/w801Mbx1boUoBo26zXmha15JQzL.jpg", rating: 0.0},
+            { title: "American Psycho", img: "https://image.tmdb.org/t/p/original/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg", rating: 9.2 },
+            { title: "Companion", img: "https://image.tmdb.org/t/p/original/oCoTgC3UyWGfyQ9thE10ulWR7bn.jpg", rating: 0.0},
+            { title: "Twilight", img: "https://image.tmdb.org/t/p/original/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg", rating: 7.2 },
+            { title: "Twilight: New Moon", img: "https://image.tmdb.org/t/p/original/j5jM5pq78ObAXX1WhTsb115EkLl.jpg", rating: 7.0 },
+            { title: "The Substance", img: "https://image.tmdb.org/t/p/original/o7GFN0c1YvbnB0JmAb9aSoDDvdn.jpg", rating: 8.3 },
+            { title: "Hereditary", img: "https://image.tmdb.org/t/p/w500/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg", rating: 0.0 },
+            { title: "It", img: "https://image.tmdb.org/t/p/original/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg", rating: 0.0},
+            { title: "The Hangover", img: "https://image.tmdb.org/t/p/original/A0uS9rHR56FeBtpjVki16M5xxSW.jpg", rating: 0.0},
+            { title: "Be Kind Rewind", img: "https://image.tmdb.org/t/p/original/xXfd7DJCm7M577F5N5WljT61mSc.jpg", rating: 0.0},
+            { title: "Fallen Angels", img: "https://image.tmdb.org/t/p/original/fnbdv4uSFUGJ2jp9Gf99fYtlIu3.jpg", rating: 0.0},
+            { title: "Bodies Bodies Bodies", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 6.9 },
+            { title: "Twilight", img: "https://image.tmdb.org/t/p/original/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg", rating: 7.2 },
+
+            // Cartoons
+            { title: "Lego Batman", img: "https://image.tmdb.org/t/p/original/snGwr2gag4Fcgx2OGmH9otl6ofW.jpg", rating: 0.0},
+            { title: "Shrek", img: "https://image.tmdb.org/t/p/original/o04jZs5SXhbvhqO4981W7KJXOWZ.jpg", rating: 0.0},
             { title: "My Little Pony: Equestria Girls Rainbow Rocks", img: "https://image.tmdb.org/t/p/original/xcSrR4HXHsFXqjAg8nY7y6JMAG4.jpg", rating: 0.0 },
+            { title: "The Secret World of Arrietty", img: "https://image.tmdb.org/t/p/original/oc2OB2KDmSRDMelKEAA1n4YRQL0.jpg", rating: 0.0},
             { title: "My little Pony: Equestria Girls Freindship Games", img: "https://image.tmdb.org/t/p/original/ih6vNDVWAeSYJYoQAk03Gykl1DJ.jpg", rating: 0.0 }
+            { title: "Frozen", img: "https://image.tmdb.org/t/p/original/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg", rating: -0.0},
+            { title: "My Little Pony: Equestria Girls", img: "https://image.tmdb.org/t/p/original/egAZsrGuv6XeyMAmSJfjcKRCIWB.jpg", rating: 0.0 },
+
+
+            
         ];
 
         // Sort movies by rating (highest to lowest)
@@ -141,14 +160,13 @@
             rankedMoviesContainer.appendChild(movieDiv);
         });
 
+
         const upNextMovies = [
             { title: "Get Out", img: "https://image.tmdb.org/t/p/w500/rGfGfgL2pEPCfhIvqHXieXFn7gp.jpg", category: "Horror" },
-            { title: "The Shining", img: "https://image.tmdb.org/t/p/original/fFYAlrOudDJRYs8tvuHbUk0OGdL.jpg", category: "Horror" },
             { title: "X", img: "https://image.tmdb.org/t/p/w500/drlfSCIlMKrEeMPhi8pqY4xGxj.jpg", category: "Horror" },
             { title: "Smile", img: "https://image.tmdb.org/t/p/w500/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg", category: "Horror" },
             { title: "Psycho", img: "https://image.tmdb.org/t/p/w500/81d8oyEFgj7FlxJqSDXWr8JH8kV.jpg", category: "Horror" },
             { title: "The Thing", img: "https://image.tmdb.org/t/p/original/wr17SDewv9A4yo9FkEhXpgwjGC1.jpg", category: "Horror" },
-            { title: "It", img: "https://image.tmdb.org/t/p/w500/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg", category: "Horror" },
             { title: "His House", img: "https://image.tmdb.org/t/p/original/idh2QAy5NwBRN94ScmtWrukvOgJ.jpg", category: "Horror" },
             { title: "Nope", img: "https://image.tmdb.org/t/p/w500/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg", category: "Horror" },
             { title: "Bird Box", img: "https://image.tmdb.org/t/p/w500/rGfGfgL2pEPCfhIvqHXieXFn7gp.jpg", category: "Horror" },
@@ -157,21 +175,22 @@
             { title: "Split", img: "https://image.tmdb.org/t/p/w500/bqb9WsmZmDIKxqYmBJ9lj7J6hzn.jpg", category: "Horror" },
             { title: "The Lighthouse", img: "https://image.tmdb.org/t/p/w500/3nk9UoepYmv1G9oP18q6JJCeYwN.jpg", category: "Horror" },
             { title: "The Killing of a Sacred Deer", img: "https://image.tmdb.org/t/p/original/AqMJ2bu2A4kZYpuCxvwADLpp45D.jpg", category: "Horror" },
-            { title: "Pontypool", img: "https://image.tmdb.org/t/p/original/eGCvmv0Dmaqo9O8qckMDSIHSSZ7.jpg", category: "Horror" },
-            // Non-Horror Movies
+            { title: "Pontypool", img: "https://image.tmdb.org/t/p/original/gpldyCjpfRAC9Z8u2gnLMrVNiNW.jpg", category: "Horror" },
+
+        //Non-Horror Movies
             { title: "Paddington Bear", img: "https://image.tmdb.org/t/p/w500/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg", category: "Family" },
             { title: "Jackass", img: "https://image.tmdb.org/t/p/original/lMN2OiHFBUFnuW4wPi6TEocR8nq.jpg", category: "Comedy" },
             { title: "Now You See Me", img: "https://image.tmdb.org/t/p/original/h4LgHQtpm9si92edda5JN6g0tX4.jpg", category: "Thriller" },
             { title: "Fight Club", img: "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg", category: "Drama" },
             { title: "Step Brothers", img: "https://image.tmdb.org/t/p/original/jV0eDViuTRf9cmj4H0JNvbvaNbR.jpg", category: "Comedy" },
-            { title: "Inglourious Basterds", img: "https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg", category: "balnk" },
+            { title: "Inglourious Basterds", img: "https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg", category: "War" },
             { title: "The Godfather", img: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg", category: "Crime" },
-            { title: "Pulp Fiction", img: "https://image.tmdb.org/t/p/original/jYqKxBbAUdfKq3BfHKivJytFiPL.jpg", category: "Crime" },
-            { title: "Parasite", img: "https://image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg", category: "Thriller" },
-            { title: "Borat", img: "https://image.tmdb.org/t/p/original/pXYMPIw7fxX7qVrqT2haQlUxxf.jpg", category: "Comedy" },
-            { title: "The Labyrinth", img: "https://image.tmdb.org/t/p/original/pejayhTVBEL4w8YKSfrhOjjWVlH.jpg", category: "Drama" },
-            { title: "Jaws", img: "https://image.tmdb.org/t/p/original/lxM6kqilAdpdhqUl2biYp5frUxE.jpg", category: "Drama" },
+            { title: "Pulp Fiction", img: "https://image.tmdb.org/t/p/w500/plnlrtBUULT0rh3Xsjmpubiso3L.jpg", category: "Crime" },
+            { title: "Scott Pilgrim vs. The World", img: "https://image.tmdb.org/t/p/original/gseLBM6CzrwubkvGAqOsVd7FtKn.jpg", category: "Comedy" },
+            { title: "The Princess Bride", img: "https://image.tmdb.org/t/p/original/eOp2XmQpH6QYPfOVSQTSGoYABMc.jpg", category: "Fantasy" },
+            { title: "Poor Things", img: "https://image.tmdb.org/t/p/original/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg", category: "Sci-Fi" }
         ];
+    
 
         const upNextMoviesContainer = document.getElementById('upNextMovies');
         upNextMovies.forEach(movie => {
