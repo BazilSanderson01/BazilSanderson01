@@ -98,16 +98,15 @@
     </div>
 
     <script>
-const rankedMovies = [
-
-            { title: "Borat", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", rating: 10.0 },
-            { title: "The Room", img: "https://image.tmdb.org/t/p/original/oGI3QSsY4XsmUzuNYUQBQDdjuaP.jpg", rating: 0.0 },
+        const rankedMovies = [
+            { title: "Borat", img: "", rating: 10.0 },
+            { title: "The Room", img: "https://image.tmdb.org/t/p/original/oGI3QSsY4XsmUzuNYUQBQDdjuaP.jpg", rating: 9.8 },
             { title: "SuperBad", img: "https://image.tmdb.org/t/p/original/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg", rating: 9.0 },
             { title: "Ferris Bueller's Day Off", img: "https://image.tmdb.org/t/p/original/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg", rating: 8.7 },
-            { title: "Borat 2", img: "https://image.tmdb.org/t/p/original/kwh9dYvZLn7yJ9nfU5sPj2h9O7l.jpg", rating: 0.0 },
+            { title: "Borat 2", img: "https://image.tmdb.org/t/p/original/kwh9dYvZLn7yJ9nfU5sPj2h9O7l.jpg", rating: 8.6 },
             { title: "Creep", img: "https://image.tmdb.org/t/p/original/qn53D574tT0YRyLgirEFHQwGUXw.jpg", rating: 8.5 },
             { title: "Heretic", img: "https://image.tmdb.org/t/p/original/fr96XzlzsONrQrGfdLMiwtQjott.jpg", rating: 8.4 },
-            { title: "Parasite", img: "https://image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg", rating 0.0 },
+            { title: "Parasite", img: "https://image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg", rating: 8.4 },
             { title: "Mickey 17", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 8.3 },
             { title: "Creep 2", img: "https://image.tmdb.org/t/p/original/a0m7WciFnBqpcyH1Yi8i4tdvk0k.jpg", rating: 8.1 },
             { title: "Saltburn", img: "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg", rating: 7.5 },
@@ -125,42 +124,48 @@ const rankedMovies = [
             { title: "Fallen Angels", img: "https://image.tmdb.org/t/p/original/fnbdv4uSFUGJ2jp9Gf99fYtlIu3.jpg", rating: 0.0},
             { title: "Bodies Bodies Bodies", img: "https://image.tmdb.org/t/p/original/hRniPlHMXODzDnzR9ZJOtQEFHuX.jpg", rating: 6.9 },
             { title: "Twilight", img: "https://image.tmdb.org/t/p/original/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg", rating: 7.2 },
-
+            // Cocain Bear
+       
             // Cartoons
             { title: "Lego Batman", img: "https://image.tmdb.org/t/p/original/snGwr2gag4Fcgx2OGmH9otl6ofW.jpg", rating: 0.0},
             { title: "Shrek", img: "https://image.tmdb.org/t/p/original/o04jZs5SXhbvhqO4981W7KJXOWZ.jpg", rating: 0.0},
             { title: "My Little Pony: Equestria Girls Rainbow Rocks", img: "https://image.tmdb.org/t/p/original/xcSrR4HXHsFXqjAg8nY7y6JMAG4.jpg", rating: 0.0 },
             { title: "The Secret World of Arrietty", img: "https://image.tmdb.org/t/p/original/oc2OB2KDmSRDMelKEAA1n4YRQL0.jpg", rating: 0.0},
-            { title: "My little Pony: Equestria Girls Freindship Games", img: "https://image.tmdb.org/t/p/original/ih6vNDVWAeSYJYoQAk03Gykl1DJ.jpg", rating: 0.0 }
+            { title: "My little Pony: Equestria Girls Freindship Games", img: "https://image.tmdb.org/t/p/original/ih6vNDVWAeSYJYoQAk03Gykl1DJ.jpg", rating: 0.0 },
             { title: "Frozen", img: "https://image.tmdb.org/t/p/original/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg", rating: -0.0},
-            { title: "My Little Pony: Equestria Girls", img: "https://image.tmdb.org/t/p/original/egAZsrGuv6XeyMAmSJfjcKRCIWB.jpg", rating: 0.0 },
+            { title: "My Little Pony: Equestria Girls", img: "https://image.tmdb.org/t/p/original/egAZsrGuv6XeyMAmSJfjcKRCIWB.jpg", rating: 0.0 }
 
-
-            
         ];
+       
 
         // Sort movies by rating (highest to lowest)
         rankedMovies.sort((a, b) => b.rating - a.rating);
 
-        const rankedMoviesContainer = document.getElementById('rankedMoviesContainer');
-        rankedMovies.forEach(movie => {
-            const movieDiv = document.createElement('div');
-            movieDiv.classList.add('movie');
+        // Function to display the ranked movies
+        function displayRankedMovies() {
+            const container = document.getElementById('rankedMoviesContainer');
+            container.innerHTML = ''; // Clear any existing content
 
-            const img = document.createElement('img');
-            img.src = movie.img;
-            img.alt = movie.title;
+            rankedMovies.forEach(movie => {
+                const movieElement = document.createElement('div');
+                movieElement.classList.add('movie');
+                
+                const movieImg = document.createElement('img');
+                movieImg.src = movie.img || `https://placehold.co/2000x3000?text=${movie.title}`; // Fallback image
+                movieImg.alt = movie.title;
+                movieElement.appendChild(movieImg);
+                
+                const movieRanking = document.createElement('div');
+                movieRanking.classList.add('ranking');
+                movieRanking.textContent = `☆ ${movie.rating}`;
+                movieElement.appendChild(movieRanking);
+                
+                container.appendChild(movieElement);
+            });
+        }
 
-            const ranking = document.createElement('div');
-            ranking.classList.add('ranking');
-            ranking.innerText = movie.rating.toFixed(1);
-
-            movieDiv.appendChild(img);
-            movieDiv.appendChild(ranking);
-            rankedMoviesContainer.appendChild(movieDiv);
-        });
-
-
+        // Display the ranked movies on page load
+        displayRankedMovies();
         const upNextMovies = [
             { title: "Get Out", img: "https://image.tmdb.org/t/p/w500/rGfGfgL2pEPCfhIvqHXieXFn7gp.jpg", category: "Horror" },
             { title: "X", img: "https://image.tmdb.org/t/p/w500/drlfSCIlMKrEeMPhi8pqY4xGxj.jpg", category: "Horror" },
@@ -190,7 +195,7 @@ const rankedMovies = [
             { title: "The Princess Bride", img: "https://image.tmdb.org/t/p/original/eOp2XmQpH6QYPfOVSQTSGoYABMc.jpg", category: "Fantasy" },
             { title: "Poor Things", img: "https://image.tmdb.org/t/p/original/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg", category: "Sci-Fi" }
         ];
-    
+    //Hunger Games
 
         const upNextMoviesContainer = document.getElementById('upNextMovies');
         upNextMovies.forEach(movie => {
